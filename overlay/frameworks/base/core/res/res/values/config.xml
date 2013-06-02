@@ -206,4 +206,7 @@
          through AudioManager.playSoundEffect() when no volume is specified. -->
     <integer name="config_soundEffectVolumeDb">-12</integer>
 
+    <!-- Values greater or equal to 0 will enable electronbeam screen-on
+         animation with the specified delay (in milliseconds), -1 will disable the animation -->
+    <integer name="config_screenOnAnimation">100</integer>
 </resources>
