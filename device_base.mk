@@ -111,7 +111,6 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-	make_ext4fs \
 	setup_fs
 
 PRODUCT_CHARACTERISTICS := nosdcard
@@ -154,7 +153,8 @@ PRODUCT_PACKAGES += \
 	audio.usb.default
 
 PRODUCT_COPY_FILES += \
-	device/samsung/crespo/libaudio/audio_policy.conf:system/etc/audio_policy.conf
+	device/samsung/crespo/libaudio/audio_policy.conf:system/etc/audio_policy.conf \
+	device/samsung/crespo/libaudio/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -208,6 +208,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Disable scissor optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
        ro.hwui.disable_scissor_opt=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+       ro.bq.gpu_to_cpu_unsupported=1
 
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
 

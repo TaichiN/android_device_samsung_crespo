@@ -173,7 +173,7 @@ service dhcpcd_uwbr0 /system/bin/dhcpcd -ABDKL
     oneshot
 
 # bluetooth
-service dhcpcd_bnep0 /system/bin/dhcpcd -ABKL
+service dhcpcd_bt-pan /system/bin/dhcpcd -ABKL
     class main
     disabled
     oneshot
@@ -192,16 +192,8 @@ service iprenew_uwbr0 /system/bin/dhcpcd -n
     oneshot
 
 # bluetooth
-service iprenew_bnep0 /system/bin/dhcpcd -n
+service iprenew_bt-pan /system/bin/dhcpcd -n
     class main
-    disabled
-    oneshot
-
-service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
-    --baudrate 3000000 --patchram /vendor/firmware/bcm4329.hcd /dev/s3c2410_serial0
-    class main
-    user bluetooth
-    group bluetooth net_bt_admin
     disabled
     oneshot
 
