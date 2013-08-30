@@ -2,4 +2,6 @@
 <resources>
     <bool name="has_led_flash">true</bool>
     <bool name="config_show_volumeRockerWake">true</bool>
+    <!-- Whether or not the USB audio settings are to be displayed for this device -->
+    <bool name="has_usb_audio_settings">true</bool>
 </resources>
