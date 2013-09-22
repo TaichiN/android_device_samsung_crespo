@@ -34,10 +34,6 @@ public class DisplayColorCalibration {
         return 0;
     }
 
-    public static String getDefaultColors() {
-        return "255 255 255";
-    }
-
     public static boolean fileExists(String filename) {
         return new File(filename).exists();
     }
