@@ -208,18 +208,14 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Disable scissor optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hwui.disable_scissor_opt=true
+       ro.hwui.disable_scissor_opt=true
 
 # Mark the device as low ram
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.low_ram=true
 
-# Disable JIT
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.jit.codecachesize=0
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bq.gpu_to_cpu_unsupported=1
+       ro.bq.gpu_to_cpu_unsupported=1
 
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
 
