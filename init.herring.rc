@@ -36,6 +36,7 @@ on fs
     chmod 770 /efs/bluetooth
     chmod 770 /efs/imei
     mount_all /fstab.herring
+    swapon_all fstab.herring
 
     export EXTERNAL_STORAGE /storage/sdcard0
     mkdir /storage/sdcard0 0000 system system
@@ -122,10 +123,6 @@ on fs
     restorecon /sys/devices/virtual/misc/voodoo_sound/speaker_tuning
     restorecon /sys/devices/virtual/misc/voodoo_sound/stereo_expansion
     restorecon /sys/devices/virtual/misc/voodoo_sound/stereo_expansion_gain
-
-    # activate zram
-    swapon_all fstab.herring
-    write /proc/sys/vm/page-cluster 0
 
 on post-fs-data
 # wi-fi
